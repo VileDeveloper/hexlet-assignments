@@ -1,0 +1,30 @@
+- content_for :title do
+  / page title (h1)
+  h1 =t('posts.posts')
+  / BEGIN
+
+  / END
+
+table.table.table-striped.table-hover.mb-5
+  thead
+    tr
+      th{ scope = 'col' } #
+      th{ scope = 'col' } = t('posts.posts')
+      th{ scope = 'col' } = t('comments.comments')
+      th{ scope = 'col' } = t('posts.show.title')
+
+
+  tbody
+    - @posts.each_with_index do |post, i|
+      tr
+        th{ scope = 'row' } = i + 1
+        td = post.title
+        td = t('posts.index', count: post.comments.count)
+
+        td.d-flex
+          = link_to t('posts.show.title'), post_path(post), class: 'nav-link link-dark'
+/ new post link
+= link_to new_post_path, id: 'new-post-link', class: 'btn btn-primary' do
+  / BEGIN
+  = t('posts.new')
+  / END

@@ -1,0 +1,11 @@
+ru:
+  "home_page": "Домашняя страница"
+  "home": "Домой"
+  "hexlet":
+    "hexlet_title": "© Хекслет, 2022"
+
+
+  "new_posts": "Создать Пост"
+  "title_label": "Название"
+  "body_label": "Тело поста"
+  "hexlet_logo": "Логотип хекслета"
