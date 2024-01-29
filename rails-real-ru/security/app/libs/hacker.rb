@@ -22,10 +22,10 @@ class Hacker
       page = Nokogiri::HTML(response.body)
       authenticity_token = page.at('input[@name="authenticity_token"]')['value']
       post_params = {
-        authenticity_token: ,
+        authenticity_token: authenticity_token,
         'user[email]' => email,
         'user[password]' => password,
-        'user[password_confirmation]' => password,
+        'user[password_confirmation]' => password
       }
 
       request = Net::HTTP::Post.new URI.join(host, users_path)
