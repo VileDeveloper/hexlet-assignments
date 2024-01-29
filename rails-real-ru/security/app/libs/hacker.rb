@@ -20,9 +20,9 @@ class Hacker
       cookie = response.response['set-cookie'].split('; ')[0]
 
       page = Nokogiri::HTML(response.body)
-      authenticity_token = page.at('input[@name="authenticity_token"]')['value']
+      token = page.at('input[@name="authenticity_token"]')['value']
       post_params = {
-        authenticity_token: authenticity_token,
+        authenticity_token: token,
         'user[email]' => email,
         'user[password]' => password,
         'user[password_confirmation]' => password
