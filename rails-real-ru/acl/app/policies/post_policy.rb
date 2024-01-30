@@ -5,6 +5,8 @@ class PostPolicy < ApplicationPolicy
   attr_reader :user, :post
 
   def initialize(user, post)
+    super
+
     @user = user
     @post = post
   end
