@@ -6,7 +6,7 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.account_activation.subject
   #
-  def account_activation
+  def account_activation(user)
     # BEGIN
     @user = user
     @url = url_for(controller: 'users',
