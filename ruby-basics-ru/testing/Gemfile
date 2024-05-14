@@ -3,5 +3,5 @@
 source 'https://rubygems.org'
 
 # BEGIN
-gem install 'minitest-power_assert'
+gem 'minitest-power_assert'
 # END
