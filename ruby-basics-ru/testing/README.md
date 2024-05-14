@@ -36,7 +36,7 @@ stack.empty? # true
 
 ## Gemfile
 
-Установите гем `minitest-power_assert`:
+Добавьте гем `minitest-power_assert` в Gemfile и установите его:
 
 ```ruby
 gem install 'minitest-power_assert'
